@@ -728,7 +728,7 @@ function getListRank() {
   })
 }
 
-function updateShareCodesCDN(url = 'https://cdn.jsdelivr.net/gh/wuzhi-docker1/updateTeam@master/shareCodes/jd_cityShareCodes.json') {
+function updateShareCodesCDN(url = 'https://cdn.jsdelivr.net/gh/readme02/updateTeam@master/shareCodes/jd_cityShareCodes.json') {
   return new Promise(resolve => {
     $.get({url , headers:{"User-Agent": $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT : (require('./USER_AGENTS').USER_AGENT)) : ($.getdata('JDUA') ? $.getdata('JDUA') : "jdapp;iPhone;9.4.4;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1")}, timeout: 200000}, async (err, resp, data) => {
       try {
@@ -750,7 +750,7 @@ function updateShareCodesCDN(url = 'https://cdn.jsdelivr.net/gh/wuzhi-docker1/up
 function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
-    $.get({url: `https://cdn.jsdelivr.net/gh/wuzhi-docker1/updateTeam@master/shareCodes/jd_cityShareCodes.json`, 'timeout': 20000}, (err, resp, data) => {
+    $.get({url: `https://cdn.jsdelivr.net/gh/readme02/updateTeam@master/shareCodes/jd_cityShareCodes.json`, 'timeout': 20000}, (err, resp, data) => {
       try {
         if (err) {
           console.log(`${JSON.stringify(err)}`)
