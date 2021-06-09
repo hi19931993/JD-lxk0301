@@ -9,7 +9,7 @@
 #jd_shoplottery
 10 15 * * * node /scripts/jd_shoplottery.js >> /scripts/logs/jd_shoplottery.log 2>&1
 #jd_health
-13 1,22 * * * node /scripts/jd_health.js >> /scripts/logs/jd_health.log 2>&1
+13 1,7,22 * * * node /scripts/jd_health.js >> /scripts/logs/jd_health.log 2>&1
 #jd_health_collect
 5-45/20 * * * * node /scripts/jd_health_collect.js >> /scripts/logs/jd_health_collect.log 2>&1
 #jd_market_lottery
